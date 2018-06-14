@@ -3,137 +3,100 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <head>
-  <title>calculator
-  </title>
-  <script type="text/javascript">
-
-function hello() {
-  document.getElementById('exp').value += this.id;
-}
-function expeval() {
-  var a = 0;
-  try{
-    a = eval(document.getElementById('exp').value);
-     alert(" The Output is "+ a);
-     document.getElementById('exp').value = a;
-  }
-  catch(ex){
-    alert(ex.message);
-  }
-
-  
-}
-function clear() {
-  document.getElementById('exp').value = '';
-}
-
-
-document.getElementById('1').addEventListener('click', hello);
-document.getElementById('2').addEventListener('click', hello);
-document.getElementById('3').addEventListener('click', hello);
-document.getElementById('4').addEventListener('click', hello);
-document.getElementById('5').addEventListener('click', hello);
-document.getElementById('6').addEventListener('click', hello);
-document.getElementById('7').addEventListener('click', hello);
-document.getElementById('8').addEventListener('click', hello);
-document.getElementById('9').addEventListener('click', hello);
-document.getElementById('0').addEventListener('click', hello);
-document.getElementById('.').addEventListener('click', hello);
-document.getElementById('+').addEventListener('click', hello);
-document.getElementById('-').addEventListener('click', hello);
-document.getElementById('%').addEventListener('click', hello);
-document.getElementById('*').addEventListener('click', hello);
-document.getElementById('/').addEventListener('click', hello);
-document.getElementById('=').addEventListener('click', expeval);
-document.getElementById('C').addEventListener('click', clear);
-
-</script>
+	<title>My calculator</title>
 </head>
-<body>
-  <table>
-    <tr>
-      <div class="card">
-      <td>
-      
-          <table  style="background: grey">
-              <tr>
-                  <td colspan=4>
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">Calc</span>
-                    
-                     <input type="text" placeholder ="Expression" id="exp">
-                     </div>
-                  </td>
-              </tr>
-               <tr>
-                  <td>
-                    <input type="button" value="7"  class="btn btn-info btn-block" id="7">
-                  </td>
-                  <td>
-                    <input type="button" value="8"  class="btn btn-info btn-block" id="8">
-                  </td>
-                  <td>
-                    <input type="button" value="9" class="btn btn-info btn-block" id="9">
-                  </td>
-                  <td>
-                    <input type="button" value="/"  class="btn btn-info btn-block" id="/">
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                    <input type="button" value="4"  class="btn btn-info btn-block" id="4">
-                  </td>
-                  <td>
-                    <input type="button" value="5"  class="btn btn-info btn-block" id="5">
-                  </td>
-                  <td>
-                    <input type="button" value="6"  class="btn btn-info btn-block" id="6">
-                  </td>
-                  <td>
-                    <input type="button" value="*"  class="btn btn-info btn-block" id="*">
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                    <input type="button" value="1"  class="btn btn-info btn-block" id="1">
-                  </td>
-                  <td>
-                    <input type="button" value="2"  class="btn btn-info btn-block" id="2">
-                  </td>
-                  <td>
-                    <input type="button" value="3"  class="btn btn-info btn-block" id="3">
-                  </td>
-                  <td>
-                    <input type="button" value="+" class="btn btn-info btn-block" id="+">
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                    <input type="button" value="0"  class="btn btn-info btn-block" id="0">
-                  </td>
-                  <td>
-                    <input type="button" value="."  class="btn btn-info btn-block" id=".">
-                  </td>
-                  <td>
-                    <input type="button" value="%" class="btn btn-info btn-block" id="%">
-                  </td>
-                  <td>
-                    <input type="button" value="-"  class="btn btn-info btn-block" id="-">
-                  </td>
-               </tr>
-               <tr>
-                <td colspan="2">
-                  <input type="button" value ="C"  class="btn btn-primary btn-block" id="C">
-                </td>
-                <td colspan="2">
-                  <input type="button" value = "=" class="btn btn-danger btn-block" id="=">
-                </td>
-               </tr>
-               <script type="text/javascript" src="popup.js"></script>
-            </table>
-        </td>
-      </tr>
-    </table>
-  </div>
+<body><br>
+<div class="container">
+	<div class="row">
+		<div class = col-4>
+			<form name="calc">
+			<div class="container" style="background: grey">
+				<br>
+				<div class="row">
+
+					<div class="col-9">
+						<div class="input-group mb-3">
+						  	<input type="text" class="form-control" placeholder="Expression" aria-label="Expression" aria-describedby="basic-addon1" name="exp">
+						</div>
+					</div>
+					<div class="col-1">
+						<button type="button" class="btn btn-success" onclick="calc.exp.value=''">Clear</button>
+					</div>
+				</div>
+
+				<div class="row">
+				    <div class="col">
+				     	 <button   type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='1'" onclick="calc.exp.value+='1'">1</button>
+				    </div>
+				    <div class="col">
+				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='2'">2</button>
+				    </div>
+				    <div class="col">
+				    	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='3'">3</button>
+				    </div>
+				    <div class="col">
+				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='+'">+</button>
+				    </div>
+				    
+			    </div>
+			<br>
+				<div class="row">
+				    <div class="col">
+				     	 <button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='4'">4</button>
+				    </div>
+				    <div class="col">
+				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='5'">5</button>
+				    </div>
+				    <div class="col">
+				    	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='6'">6</button>
+				    </div>
+				    <div class="col">
+				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='-'">-</button>
+				    </div>
+				    
+			    </div>
+			<br>
+			    <div class="row">
+				    <div class="col">
+				     	 <button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='7'">7</button>
+				    </div>
+				    <div class="col">
+				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='8'">8</button>
+				    </div>
+				    <div class="col">
+				    	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='9'">9</button>
+				    </div>
+				    <div class="col">
+				    <button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='*'">*</button>
+				    </div>
+				    
+			    </div>
+			<br>
+			    <div class="row">
+				    <div class="col">
+				     	 <button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='0'">0</button>
+				    </div>
+				    <div class="col">
+				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='.'">.</button>
+				    </div>
+				     <div class="col">
+				    	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value=eval(calc.exp.value)">=</button>
+				    </div>
+				    <div class="col">
+				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='/'">/</button>
+				    </div>
+				    
+			    </div>
+			<br>
+			</div>
+
+	</form>
+
+		</div>
+
+	</div>
+	
+</div>
+	
 </body>
-</html>
+</html>>
