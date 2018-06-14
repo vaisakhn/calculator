@@ -5,28 +5,26 @@
 <head>
   <title>calculator
   </title>
-  <sript>
-   
-// var app = chrome.runtime.getBackgroundPage();
+  <script type="text/javascript">
 
 function hello() {
   document.getElementById('exp').value += this.id;
 }
 function expeval() {
-	var a = 0;
-	try{
-		a = eval(document.getElementById('exp').value);
-		 alert(" The Output is "+ a);
-		 document.getElementById('exp').value = a;
-	}
-	catch(ex){
-		alert(ex.message);
-	}
+  var a = 0;
+  try{
+    a = eval(document.getElementById('exp').value);
+     alert(" The Output is "+ a);
+     document.getElementById('exp').value = a;
+  }
+  catch(ex){
+    alert(ex.message);
+  }
 
-	
+  
 }
 function clear() {
-	document.getElementById('exp').value = '';
+  document.getElementById('exp').value = '';
 }
 
 
@@ -48,8 +46,8 @@ document.getElementById('*').addEventListener('click', hello);
 document.getElementById('/').addEventListener('click', hello);
 document.getElementById('=').addEventListener('click', expeval);
 document.getElementById('C').addEventListener('click', clear);
- 
-   </script>
+
+</script>
 </head>
 <body>
   <table>
