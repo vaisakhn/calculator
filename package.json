@@ -1,5 +1,5 @@
 {
-  "name": "html-calculator",
+  "name": "calculator",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abelqburst/html-calculator.git"
+    "url": "git+https://github.com/vaisakhn/calculator.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/abelqburst/html-calculator/issues"
+    "url": "https://github.com/vaisakhn/calculator/issues"
   },
-  "homepage": "https://github.com/abelqburst/html-calculator#readme",
+  "homepage": "https://github.com/vaisakhn/calculator#readme",
   "dependencies": {
     "express": "^4.16.3"
   }
